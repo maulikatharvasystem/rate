@@ -1,0 +1,30 @@
+<div class="search-div">
+<%= form_for :search, url: dashboard_path, html: {class: 'navbar-search'} do |f| %>
+    <h1 class="search-logo">
+      <%= image_tag "logo.png"%>
+    </h1>
+
+    <%= f.text_field :category_name , :placeholder => "Search for Rate", :class => "search-query span3 search-form-text", id: "search" %>
+
+    <%#= f.submit "Go", name: nil, :class => "" %>
+    <p><h5 class='search-text'>Search 4000+ ratings and 200+ categories</h5></p>
+    <p><h6 class='search-text'>Try this: Electronics, Automobiles and Tourism</h6></p>
+<% end %>
+</div>
+<script>
+//    $(document).ready(function(){
+//        $( "#search" ).autocomplete({
+//            source: ['auto biography','zomatocame'],
+//            minLength: 2
+//        });
+//    });
+//    function get_categories(){
+//        var params = {search: $('#search').val()};
+//        $.get("search",
+//                params,
+//                function(data){
+//                    return data;
+//                },
+//        "json");
+//    }
+</script>

@@ -1,0 +1,23 @@
+<div style="margin: 100px 0px 0px 9%;">
+  Welcome to dash board!
+
+    <div style="text-align: center">
+
+      <h3>Categories Detail</h3>
+      <div class="js-masonry" data-masonry-options='{ "itemSelector": ".item", "columnWidth": 200 }'>
+        <% @categories.each_with_index do |category,i|  %>
+            <div class="item" width=""><img src="/assets/<%= @images[i] %>.jpeg" width="80px" height="80px"><p><%= link_to category.name, show_category_path(category) %></p></div>
+        <% end %>
+      </div>
+
+    </div>
+</div>
+<script type="text/javascript">
+      var container = document.querySelector('#container');
+      var msnry = new Masonry( container, {
+          // options...
+          itemSelector: '.item',
+          columnWidth: 200,
+          minColumn: 10
+      });
+</script>
